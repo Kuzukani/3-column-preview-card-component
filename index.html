@@ -25,9 +25,9 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      height:100vh;
+      min-height:100vh;
 
-      /*will have scroll bar without these property*/
+      /*will have vet scroll bar without these property*/
       padding: 0;
       margin: 0;
     }
@@ -45,11 +45,10 @@
     .container{
       display: flex;
       justify-content: center;
-      /*defined container width and height*/
-      width:50%;
     }
     .card{
       padding:50px;
+      width: 300px;
     }
     .orange{
       background-color: hsl(31, 77%, 52%);
@@ -70,7 +69,7 @@
     p{
       font-family: 'Lexend Deca', sans-serif;
       color:hsla(0, 0%, 100%, 0.75);
-      font-size: 1.05em;
+      font-size: 1em;
     }
     .button{
       font-family: 'Lexend Deca', sans-serif;
@@ -97,37 +96,14 @@
     .green-txt{
       color: hsl(179, 100%, 13%);
     }
-    @media only screen and (max-width:333px){
-      /*for galaxy fold*/
-      .card{
-        padding:20px;
-      }
-      .button{
-        margin:20px 0;
-      }
-    }
-    @media only screen and (max-width:1440px){
-      .container{
-        width:60%;
-      }
-      .button{
-        margin-top: 60px;
-      }
-    }
-    @media only screen and (max-width:1024px){
-      body{
-        height:auto;
-        margin:50px 0;
+    @media only screen and (max-width:970px){
+      .attribution{
+        display: none;
       }
       .container{
-        justify-content: initial;
-        align-items: initial;
         flex-direction: column;
 
-        width:80%;
-      }
-      .button{
-        margin-top:40px;
+        margin: 20px 0;
       }
       .orange{
         border-radius: 10px 10px 0 0;
@@ -135,8 +111,21 @@
       .green{
         border-radius: 0 0 10px 10px;
       }
+      .button{
+        margin-top: 40px;
+      }
     }
-    
+    @media only screen and (max-width:340px){
+      .container{
+        margin:20px;
+      }
+      .card{
+        width:100%;
+      }
+      .button{
+        padding:10px 20px;
+      }
+    }
   </style>
 </head>
 <body>
